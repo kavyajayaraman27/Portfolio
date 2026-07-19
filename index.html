@@ -62,7 +62,7 @@
 
             <h2>KJ</h2>
 
-            <p>Once upon a time, a portfolio was loading...</p>
+            <p>Loading portfolio...</p>
 
         </div>
 
@@ -81,7 +81,7 @@
     <div id="progress-bar"></div>
 
     <!-- ===============================
-            GLOBAL FAIRYTALE BACKDROP
+            GLOBAL BACKDROP
     ================================= -->
 
     <div class="fairytale-bg">
@@ -89,10 +89,6 @@
         <div class="stars-field"></div>
 
         <div class="twinkle-field"></div>
-
-        <div class="shooting-star s1"></div>
-
-        <div class="shooting-star s2"></div>
 
     </div>
 
@@ -134,7 +130,7 @@
 
             <div class="nav-right">
 
-                <button id="themeToggle">
+                <button id="themeToggle" aria-label="Toggle theme">
 
                     <i class="fas fa-moon"></i>
 
@@ -163,133 +159,11 @@
 
         <div class="hero-bg">
 
-            <!-- Moon -->
-            <svg class="moon-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" stop-color="#fff8e0"/>
-                        <stop offset="60%" stop-color="#fff1c4"/>
-                        <stop offset="100%" stop-color="#ffe9a8"/>
-                    </radialGradient>
-                    <filter id="moonBlur"><feGaussianBlur stdDeviation="6"/></filter>
-                </defs>
-                <circle cx="100" cy="100" r="85" fill="url(#moonGlow)" filter="url(#moonBlur)" opacity="0.55"/>
-                <circle cx="100" cy="100" r="65" fill="url(#moonGlow)"/>
-                <circle cx="80" cy="75" r="9" fill="#f4dfa0" opacity="0.6"/>
-                <circle cx="120" cy="95" r="6" fill="#f4dfa0" opacity="0.5"/>
-                <circle cx="95" cy="130" r="11" fill="#f4dfa0" opacity="0.55"/>
-                <circle cx="130" cy="60" r="4" fill="#f4dfa0" opacity="0.4"/>
-            </svg>
-
-            <!-- Castle silhouette with lit windows -->
-            <svg class="castle-svg" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <g fill="#0a1230" stroke="#2a3a6e" stroke-width="1" opacity="0.92">
-                    <rect x="520" y="120" width="30" height="90"/>
-                    <polygon points="535,90 555,120 515,120"/>
-                    <rect x="560" y="90" width="40" height="120"/>
-                    <polygon points="580,55 605,90 555,90"/>
-                    <rect x="605" y="130" width="26" height="80"/>
-                    <polygon points="618,100 634,130 602,130"/>
-                    <rect x="470" y="140" width="24" height="70"/>
-                    <polygon points="482,112 498,140 466,140"/>
-                    <rect x="631" y="145" width="22" height="65"/>
-                    <polygon points="642,120 656,145 628,145"/>
-                    <rect x="440" y="160" width="500" height="55"/>
-                    <rect x="565" y="60" width="6" height="35"/>
-                    <polygon points="568,55 573,63 563,63"/>
-                </g>
-                <!-- flag -->
-                <polygon points="571,58 571,68 590,63" fill="#B8A9FF" opacity="0.85"/>
-                <!-- lit windows -->
-                <g class="castle-windows" fill="#ffe9a8">
-                    <rect x="528" y="145" width="7" height="10" rx="3"/>
-                    <rect x="572" y="115" width="7" height="10" rx="3"/>
-                    <rect x="612" y="150" width="6" height="9" rx="3"/>
-                    <rect x="479" y="160" width="6" height="9" rx="3"/>
-                    <rect x="638" y="163" width="6" height="8" rx="3"/>
-                    <rect x="470" y="180" width="8" height="10" rx="3"/>
-                    <rect x="510" y="185" width="8" height="10" rx="3"/>
-                    <rect x="560" y="180" width="8" height="10" rx="3"/>
-                    <rect x="620" y="185" width="8" height="10" rx="3"/>
-                    <rect x="660" y="180" width="8" height="10" rx="3"/>
-                </g>
-            </svg>
-
-            <!-- Trees along the riverbank, moonlit rim on one edge -->
-            <svg class="trees-svg" viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <g fill="#0a1230" opacity="0.95">
-                    <polygon points="60,260 90,150 120,260"/>
-                    <polygon points="70,260 90,190 110,260"/>
-                    <rect x="86" y="230" width="8" height="30"/>
-                    <polygon points="160,260 185,170 210,260"/>
-                    <rect x="193" y="230" width="6" height="30"/>
-                    <polygon points="1010,260 1040,155 1070,260"/>
-                    <polygon points="1020,260 1040,195 1060,260"/>
-                    <rect x="1036" y="230" width="8" height="30"/>
-                    <polygon points="1110,260 1135,175 1160,260"/>
-                    <rect x="1128" y="230" width="6" height="30"/>
-                    <polygon points="950,260 972,190 994,260"/>
-                </g>
-                <g fill="none" stroke="#4a5da3" stroke-width="1.5" opacity="0.55">
-                    <polygon points="60,260 90,150 120,260"/>
-                    <polygon points="1010,260 1040,155 1070,260"/>
-                    <polygon points="160,260 185,170 210,260"/>
-                    <polygon points="1110,260 1135,175 1160,260"/>
-                </g>
-            </svg>
-
-            <!-- River with moonlit reflection + Cinderella boat -->
-            <svg class="river-svg" viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <defs>
-                    <linearGradient id="riverGrad" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#26356e" stop-opacity="0.9"/>
-                        <stop offset="45%" stop-color="#141f4a" stop-opacity="0.92"/>
-                        <stop offset="100%" stop-color="#080e26" stop-opacity="0.97"/>
-                    </linearGradient>
-                    <linearGradient id="moonPath" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#fff1c4" stop-opacity="0.7"/>
-                        <stop offset="100%" stop-color="#fff1c4" stop-opacity="0"/>
-                    </linearGradient>
-                </defs>
-                <rect x="0" y="0" width="1200" height="260" fill="url(#riverGrad)"/>
-
-                <!-- moonlight column on the water -->
-                <polygon points="565,0 635,0 660,260 540,260" fill="url(#moonPath)" opacity="0.5"/>
-
-                <path class="ripple" d="M0,35 Q150,22 300,35 T600,35 T900,35 T1200,35" stroke="rgba(244,217,152,0.45)" stroke-width="2" fill="none"/>
-                <path class="ripple ripple2" d="M0,80 Q150,66 300,80 T600,80 T900,80 T1200,80" stroke="rgba(199,190,255,0.4)" stroke-width="2" fill="none"/>
-                <path class="ripple ripple3" d="M0,135 Q150,121 300,135 T600,135 T900,135 T1200,135" stroke="rgba(199,190,255,0.3)" stroke-width="2" fill="none"/>
-                <path class="ripple ripple2" d="M0,190 Q150,176 300,190 T600,190 T900,190 T1200,190" stroke="rgba(199,190,255,0.22)" stroke-width="2" fill="none"/>
-
-                <circle class="moon-reflect" cx="600" cy="30" r="30" fill="#fff1c4" opacity="0.5"/>
-
-                <!-- Boat group -->
-                <g class="boat-group" transform="translate(600,110)">
-                    <!-- water glow under boat -->
-                    <ellipse cx="0" cy="26" rx="80" ry="10" fill="#ffe9a8" opacity="0.18"/>
-                    <!-- boat hull -->
-                    <path d="M-72,18 Q0,44 72,18 L60,-2 L-60,-2 Z" fill="#0d1636" stroke="#f4d998" stroke-width="2"/>
-                    <path d="M-58,4 Q0,20 58,4" stroke="#3a4a8a" stroke-width="1.5" fill="none" opacity="0.7"/>
-                    <!-- Cinderella silhouette, gown + upswept hair -->
-                    <g transform="translate(-4,-48)" fill="#0d1636" stroke="#f4d998" stroke-width="1.8">
-                        <path d="M0,48 C-18,48 -25,30 -22,13 C-20,2 -12,-5 -2,-7 C7,-9 6,-18 -1,-22 C6,-27 17,-24 19,-15 C21,-6 16,3 22,11 C29,20 24,37 11,45 C7,47 3,48 0,48 Z"/>
-                        <circle cx="1" cy="-29" r="7.5"/>
-                        <path d="M-6,-33 C-9,-38 -6,-44 1,-44 C8,-44 11,-38 8,-33" fill="none" stroke="#f4d998" stroke-width="1.4"/>
-                    </g>
-                    <!-- lantern glow at bow -->
-                    <circle cx="48" cy="2" r="4.5" fill="#ffe9a8"/>
-                    <circle cx="48" cy="2" r="13" fill="#ffe9a8" opacity="0.3"/>
-                    <circle cx="48" cy="2" r="20" fill="#ffe9a8" opacity="0.12"/>
-                </g>
-            </svg>
-
             <div class="cloud cloud1"></div>
 
             <div class="cloud cloud2"></div>
 
             <div class="sparkles"></div>
-
-            <div class="fireflies"></div>
 
         </div>
 
@@ -423,21 +297,6 @@ ABOUT SECTION
         </div>
 
         <div class="about-content">
-
-            <!-- Left Side -->
-
-            <div class="about-image">
-
-                <div class="image-box">
-
-                    <img src="images/profile.png"
-                        alt="Kavya Jayaraman">
-
-                </div>
-
-            </div>
-
-            <!-- Right Side -->
 
             <div class="about-text">
 
@@ -907,7 +766,7 @@ EXPERIENCE SECTION
 
         </div>
 
-        <div class="timeline">
+        <div class="timeline single">
 
             <!-- Experience 1 -->
 
@@ -1106,13 +965,6 @@ PROJECTS SECTION
 
             <div class="project-card">
 
-                <!-- <div class="project-image">
-
-                    <img src="assets/project1.jpg"
-                        alt="Utility Bill Management System">
-
-                </div> -->
-
                 <div class="project-content">
 
                     <span class="project-category">
@@ -1164,13 +1016,6 @@ PROJECTS SECTION
             ========================== -->
 
             <div class="project-card">
-
-                <!-- <div class="project-image">
-
-                    <img src="assets/project2.jpg"
-                        alt="Invoice Processing System">
-
-                </div> -->
 
                 <div class="project-content">
 
@@ -1229,64 +1074,40 @@ PROJECTS SECTION
 CERTIFICATIONS
 ========================================================== -->
 
-<section id="certifications" class="certifications">
-
-    <div class="container">
-
-        <div class="section-title">
-
+<div class="certificate-card">
+<div class="section-title">
+ 
             <span>ACHIEVEMENTS</span>
-
+ 
             <h2>Certifications</h2>
-
+ 
             <p>
-
+ 
                 Continuous learning and upskilling to stay updated
                 with modern cloud and software technologies.
-
+ 
             </p>
-
+ 
         </div>
+    
 
-        <div class="certification-grid">
-
-            <!-- Certificate 1 -->
-
-            <div class="certificate-card">
-
-                <div class="certificate-icon">
-
-                    <i class="fa-solid fa-award"></i>
-
-                </div>
-
-                <h3>
-
-                    AWS Cloud Architect Certification
-
-                </h3>
-
-                <h4>
-
-                    Codicature (2024)
-
-                </h4>
-
-                <p>
-
-                    Highly available, fault-tolerant AWS design —
-                    VPC, disaster recovery, serverless, CloudFormation
-                    (IaC) and security best practices.
-
-                </p>
-
-            </div>
-
-        </div>
-
+    <div class="certificate-icon">
+        <i class="fa-solid fa-award"></i>
     </div>
 
-</section>
+    <h3>AWS Cloud Architect Certification</h3>
+
+    <h4>Codicature (2024)</h4>
+
+    <p>
+        Highly available, fault-tolerant AWS design —
+        VPC, disaster recovery, serverless,
+        CloudFormation (IaC) and security best practices.
+    </p>
+<a href="files/aws-certificate.pdf" target="_blank" class="certificate-btn">
+    View Certificate
+</a>
+</div>
 
 <!-- ==========================================================
 EDUCATION
@@ -1540,13 +1361,15 @@ CONTACT SECTION
 
                 <div class="contact-card">
 
-                    <i class="fas fa-phone"></i>
+                    <i class="fab fa-linkedin"></i>
 
-                    <h3>Phone</h3>
+                    <h3>LinkedIn</h3>
 
                     <p>
 
-                        +91 8903327740
+                        linkedin.com/in/kavyajayaraman
+
+                    </p>
 
                     </p>
 
@@ -1743,7 +1566,7 @@ FOOTER
 SCROLL TO TOP BUTTON
 ========================================================== -->
 
-<button id="topBtn">
+<button id="topBtn" aria-label="Scroll to top">
 
     <i class="fas fa-arrow-up"></i>
 

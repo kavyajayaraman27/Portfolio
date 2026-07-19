@@ -23,6 +23,59 @@ const SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyitn0XeVu2eE
 document.addEventListener("DOMContentLoaded", () => {
 
     /*==========================
+    THEME (applied ASAP so no flash)
+    ==========================*/
+
+    const themeBtn = document.getElementById("themeToggle");
+    const themeIcon = themeBtn ? themeBtn.querySelector("i") : null;
+
+    function applyTheme(theme) {
+
+        if (theme === "light") {
+
+            document.body.classList.add("light-mode");
+
+            if (themeIcon) {
+
+                themeIcon.classList.remove("fa-moon");
+                themeIcon.classList.add("fa-sun");
+
+            }
+
+        } else {
+
+            document.body.classList.remove("light-mode");
+
+            if (themeIcon) {
+
+                themeIcon.classList.remove("fa-sun");
+                themeIcon.classList.add("fa-moon");
+
+            }
+
+        }
+
+    }
+
+    const savedTheme = localStorage.getItem("theme") || "dark";
+
+    applyTheme(savedTheme);
+
+    if (themeBtn) {
+
+        themeBtn.addEventListener("click", () => {
+
+            const isLight = document.body.classList.contains("light-mode");
+            const nextTheme = isLight ? "dark" : "light";
+
+            applyTheme(nextTheme);
+            localStorage.setItem("theme", nextTheme);
+
+        });
+
+    }
+
+    /*==========================
     CONTACT FORM SUBMIT
     ==========================*/
 
@@ -91,29 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 loader.style.display = "none";
 
-            }, 600);
-
-        }
-
-    });
-
-    /*==========================
-    LOADER
-    ==========================*/
-
-    window.addEventListener("load", () => {
-
-        const loader = document.getElementById("loader");
-
-        if (loader) {
-
-            loader.style.opacity = "0";
-
-            setTimeout(() => {
-
-                loader.style.display = "none";
-
-            }, 600);
+            }, 500);
 
         }
 
@@ -196,34 +227,6 @@ document.addEventListener("DOMContentLoaded", () => {
         glow.style.left = e.clientX + "px";
 
         glow.style.top = e.clientY + "px";
-
-    });
-
-    /*==========================
-    DARK MODE
-    ==========================*/
-
-    const themeBtn = document.getElementById("themeToggle");
-
-    if (localStorage.getItem("theme") === "light") {
-
-        document.body.classList.add("light-mode");
-
-    }
-
-    themeBtn.addEventListener("click", () => {
-
-        document.body.classList.toggle("light-mode");
-
-        if (document.body.classList.contains("light-mode")) {
-
-            localStorage.setItem("theme", "light");
-
-        } else {
-
-            localStorage.setItem("theme", "dark");
-
-        }
 
     });
 
@@ -325,7 +328,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ACTIVE NAVIGATION
     ==========================*/
 
-    const sections = document.querySelectorAll("section");
+    const sections = document.querySelectorAll("section[id]");
 
     const navItems = document.querySelectorAll(".nav-links a");
 
@@ -437,13 +440,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
         anchor.addEventListener("click", function (e) {
 
-            e.preventDefault();
+            const targetId = this.getAttribute("href");
 
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
+            const target = document.querySelector(targetId);
 
-                behavior: "smooth"
+            if (target) {
 
-            });
+                e.preventDefault();
+
+                target.scrollIntoView({
+
+                    behavior: "smooth"
+
+                });
+
+            }
 
         });
 
