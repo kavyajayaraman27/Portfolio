@@ -2278,3 +2278,43 @@ RESPONSIVE (sections)
     .education-card{ padding:22px; }
 
 }
+
+@media (max-width: 768px){
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .hero-right{
+        order: -1;
+    }
+
+    .profile-card{
+
+        width:220px;
+        height:220px;
+        padding:8px;
+
+    }
+
+    .circle1{
+
+        width:250px;
+        height:250px;
+        left:-15px;
+        top:-15px;
+
+    }
+
+    .circle2{
+
+        width:280px;
+        height:280px;
+        left:-30px;
+        top:-30px;
+
+    }
+
+}
